@@ -7,6 +7,7 @@ CORS(app)  # Allow frontend to talk to backend
 @app.route('/')
 def index():
     return "server is running"
+    
 @app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get('message', '').strip().lower()
